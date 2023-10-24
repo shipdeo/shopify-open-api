@@ -57,3 +57,9 @@ curl --location 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilmen
     "deliveryType": "pickup"
 }'
 ```
+Description for request body.
+
+| Attribute| Type | Exaple | Mandatory | Description |
+| ----------- | --------- | ---------- | ---------- | ---------- |
+| deliveryTime | string | 2023-09-22T14:00:00+07:00 | false | ini menjadi wajib ketika `deliveryType` bernilai `pickup`, format waktu tanggal saat ini dan GMT +7 atau WIB |
+| deliveryType | string | pickup or dropoff | true | nilai dari `deliveryType` dapat di input `pickup` atau `dropoff`, pickup dalam arti kurir akan datang pickup barang ke lokasi pengirim atau gudang, kalau dropoff merupakan proses untuk barang yang akan dikirim di anter ke gerai terdekat |
