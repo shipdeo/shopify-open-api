@@ -103,7 +103,7 @@ Description for Request Headers
 
 | Attribute| Type | Exaple | Mandatory | Description |
 | ----------- | --------- | ---------- | ---------- | ---------- |
-| signature | string | hashing saltround 13 | true | di generate dari 4 data shop, orderId, orderNumber dan clientSecret |
+| signature | string | hashing saltround 12 | true | di generate dari 4 data shop, orderId, orderNumber dan clientSecret |
 | clientSecret | string | your-clientSecret | true | untuk clientSecret dapat di buat di sistem kita, di portal shipdeo atau di profile plugin shopify |
 
 Description for request body.
