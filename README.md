@@ -17,10 +17,10 @@ const orderInfo = {
     shop: "andi-development-store.myshopify.com",
     orderId: "5494079815902",
     orderNumber: "2104",
-    apiKey: "your-api-key"
+    clientSecret: "your-clientSecret"
 }
 
-const signature = hashing(`${orderInfo.shop}:${orderInfo.orderId}:${orderInfo.orderNumber}:${orderInfo.apiKey}`);
+const signature = hashing(`${orderInfo.shop}:${orderInfo.orderId}:${orderInfo.orderNumber}:${orderInfo.clientSecret}`);
 
 let data = JSON.stringify({
     "deliveryTime": "2023-09-22T14:00:00+07:00",
@@ -94,8 +94,8 @@ Description for Request Headers
 
 | Attribute| Type | Exaple | Mandatory | Description |
 | ----------- | --------- | ---------- | ---------- | ---------- |
-| signature | string | hashing saltround 13 | true | di generate dari 4 data shop, orderId, orderNumber dan apiKey |
-| apiKey | string | your-apikey | true | untuk api key di generate dari sistem kita, di portal shopify plugin shipdeo |
+| signature | string | hashing saltround 13 | true | di generate dari 4 data shop, orderId, orderNumber dan clientSecret |
+| clientSecret | string | your-clientSecret | true | untuk api key di generate dari sistem kita, di portal shopify plugin shipdeo |
 
 Description for request body.
 
