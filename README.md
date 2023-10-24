@@ -99,7 +99,7 @@ curl --location 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilmen
     "orderNumber": "2104"
 }'
 ```
-Description for Request Headers
+Description for Request Headers and clientSecret
 
 | Attribute| Type | Exaple | Mandatory | Description |
 | ----------- | --------- | ---------- | ---------- | ---------- |
