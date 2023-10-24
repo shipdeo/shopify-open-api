@@ -23,6 +23,9 @@ const orderInfo = {
 const signature = hashing(`${orderInfo.shop}:${orderInfo.orderId}:${orderInfo.orderNumber}:${orderInfo.clientSecret}`);
 
 let data = JSON.stringify({
+    "shop": "andi-development-store.myshopify.com",
+    "orderId": "5494079815902",
+    "orderNumber": "2104",
     "deliveryTime": "2023-09-22T14:00:00+07:00",
     "deliveryType": "pickup"
 });
@@ -64,7 +67,10 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => 'POST',
   CURLOPT_POSTFIELDS =>'{
     "deliveryTime": "2023-09-22T14:00:00+07:00",
-    "deliveryType": "pickup"
+    "deliveryType": "pickup",
+    shop: "andi-development-store.myshopify.com",
+    orderId: "5494079815902",
+    orderNumber: "2104"
 }',
   CURLOPT_HTTPHEADER => array(
     'signature: $2b$12$tnnJF8zJ9LIRu1CcOC9aSO9zx218mD1HAIR3Ppjd8ep2y1chKoiha',
@@ -87,7 +93,10 @@ curl --location 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilmen
 --header 'Content-Type: application/json' \
 --data '{
     "deliveryTime": "2023-09-22T14:00:00+07:00",
-    "deliveryType": "pickup"
+    "deliveryType": "pickup",
+    "shop": "andi-development-store.myshopify.com",
+    "orderId": "5494079815902",
+    "orderNumber": "2104"
 }'
 ```
 Description for Request Headers
