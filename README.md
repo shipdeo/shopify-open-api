@@ -32,6 +32,7 @@ let config = {
     url: 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilment',
     headers: {
         'signature': signature,
+        'x-api-key': 'your-api-key',
         'Content-Type': 'application/json'
     },
     data: data
@@ -67,6 +68,7 @@ curl_setopt_array($curl, array(
 }',
   CURLOPT_HTTPHEADER => array(
     'signature: $2b$12$tnnJF8zJ9LIRu1CcOC9aSO9zx218mD1HAIR3Ppjd8ep2y1chKoiha',
+    'x-api-key: your-api-key',
     'Content-Type: application/json'
   ),
 ));
@@ -83,12 +85,20 @@ Example in curl.
 ```bash
 curl --location 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilment' \
 --header 'signature: $2b$12$tnnJF8zJ9LIRu1CcOC9aSO9zx218mD1HAIR3Ppjd8ep2y1chKoiha' \
+--header 'x-api-key: your-api-key' \
 --header 'Content-Type: application/json' \
 --data '{
     "deliveryTime": "2023-09-22T14:00:00+07:00",
     "deliveryType": "pickup"
 }'
 ```
+Description for Request Headers
+
+| Attribute| Type | Exaple | Mandatory | Description |
+| ----------- | --------- | ---------- | ---------- | ---------- |
+| signature | string | hashing saltround 13 | true | di generate dari 3 data shop, orderId dan orderNumber |
+| x-api-key | string | your-apikey | true | untuk api key di generate dari sistem kita, di portal shopify plugin shipdeo |
+
 Description for request body.
 
 | Attribute| Type | Exaple | Mandatory | Description |
