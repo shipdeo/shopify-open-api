@@ -45,6 +45,38 @@ axios.request(config)
         console.log(error);
     });
 ```
+Example in PHP
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilment',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+    "deliveryTime": "2023-09-22T14:00:00+07:00",
+    "deliveryType": "pickup"
+}',
+  CURLOPT_HTTPHEADER => array(
+    'signature: $2b$12$tnnJF8zJ9LIRu1CcOC9aSO9zx218mD1HAIR3Ppjd8ep2y1chKoiha',
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;
+
+```
 
 Example in curl.
 
