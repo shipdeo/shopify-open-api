@@ -84,7 +84,6 @@ Example in curl.
 ```bash
 curl --location 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilment' \
 --header 'signature: $2b$12$tnnJF8zJ9LIRu1CcOC9aSO9zx218mD1HAIR3Ppjd8ep2y1chKoiha' \
---header 'x-api-key: your-api-key' \
 --header 'Content-Type: application/json' \
 --data '{
     "deliveryTime": "2023-09-22T14:00:00+07:00",
