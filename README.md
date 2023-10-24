@@ -95,8 +95,8 @@ Description for Request Headers
 
 | Attribute| Type | Exaple | Mandatory | Description |
 | ----------- | --------- | ---------- | ---------- | ---------- |
-| signature | string | hashing saltround 13 | true | di generate dari 3 data shop, orderId dan orderNumber |
-| x-api-key | string | your-apikey | true | untuk api key di generate dari sistem kita, di portal shopify plugin shipdeo |
+| signature | string | hashing saltround 13 | true | di generate dari 4 data shop, orderId, orderNumber dan apiKey |
+| apiKey | string | your-apikey | true | untuk api key di generate dari sistem kita, di portal shopify plugin shipdeo |
 
 Description for request body.
 
