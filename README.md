@@ -16,10 +16,11 @@ const hashing = (plaintext) => {
 const orderInfo = {
     shop: "andi-development-store.myshopify.com",
     orderId: "5494079815902",
-    orderNumber: "2104"
+    orderNumber: "2104",
+    apiKey: "your-api-key"
 }
 
-const signature = hashing(`${orderInfo.shop}:${orderInfo.orderId}:${orderInfo.orderNumber}`);
+const signature = hashing(`${orderInfo.shop}:${orderInfo.orderId}:${orderInfo.orderNumber}:${orderInfo.apiKey}`);
 
 let data = JSON.stringify({
     "deliveryTime": "2023-09-22T14:00:00+07:00",
@@ -32,7 +33,6 @@ let config = {
     url: 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilment',
     headers: {
         'signature': signature,
-        'x-api-key': 'your-api-key',
         'Content-Type': 'application/json'
     },
     data: data
@@ -68,7 +68,6 @@ curl_setopt_array($curl, array(
 }',
   CURLOPT_HTTPHEADER => array(
     'signature: $2b$12$tnnJF8zJ9LIRu1CcOC9aSO9zx218mD1HAIR3Ppjd8ep2y1chKoiha',
-    'x-api-key: your-api-key',
     'Content-Type: application/json'
   ),
 ));
