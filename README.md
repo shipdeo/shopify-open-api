@@ -100,7 +100,7 @@ curl --location 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilmen
 }'
 ```
 
-Example Success Response.
+Example - 200 Success Response.
 ```json
 {
     "errors": [],
@@ -109,7 +109,7 @@ Example Success Response.
 }
 ```
 
-Example Fail Response.
+Example - 403 Fail Response.
 ```json
 {
     "status": 403,
