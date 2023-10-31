@@ -99,6 +99,39 @@ curl --location 'https://sf-plugin-main-api-development.shipdeo.app/v1/fulfilmen
     "orderNumber": "2104"
 }'
 ```
+
+Example Success Response.
+```json
+{
+    "errors": [],
+    "success": true,
+    "data": true
+}
+```
+
+Example Fail Response.
+```json
+{
+    "status": 403,
+    "errorId": "e25ed763e6ee46479ac569995a3ee2aa",
+    "message": "Error ID: e25ed763e6ee46479ac569995a3ee2aa \nForbidden",
+    "errors": [
+        {
+            "error_message": "Forbidden",
+            "detail": {
+                "errorClass": "ForbiddenException",
+                "response": {
+                    "statusCode": 403,
+                    "message": "Forbidden",
+                    "error": "invalid credential"
+                },
+                "status": 403
+            }
+        }
+    ]
+}
+```
+
 Description for Request Headers and clientSecret
 
 | Attribute| Type | Exaple | Mandatory | Description |
